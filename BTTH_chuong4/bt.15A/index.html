@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thay đổi thuộc tính của trang Web</title>
+</head>
+<body>
+    <h2>Nhập vào các giá trị và nhấn nút Thay đổi</h2>
+    <input type="text" name="TieuDe" placeholder="Tiêu đề mới">&nbsp;
+    <input type="text" name="MauNen" placeholder="Nhập màu (ví dụ blue)"><br><br>
+    <input type="text" name="MauChu" placeholder="Nhập màu chữ(ví dụ white)">&nbsp;
+    <input type="text" name="TrangThai" placeholder=""><br><br>
+    <input type="button" name="ThayDoi" value="Thay đổi" onclick="CapNhat()">
+    
+    <script>
+        function CapNhat() {
+            var tieuDe = document.getElementsByName("TieuDe")[0].value;
+            var mauNen = document.getElementsByName("MauNen")[0].value;
+            var mauChu = document.getElementsByName("MauChu")[0].value;
+            var trangThai = document.getElementsByName("TrangThai")[0].value;
+
+            document.title = tieuDe; // Thay đổi tiêu đề của trang Web
+            document.body.style.backgroundColor = mauNen; // Thay đổi màu nền của trang
+            document.body.style.color = mauChu; // Thay đổi màu chữ của trang
+            window.defaultStatus = trangThai; // Thay đổi dòng trạng thái của cửa sổ
+        }
+    </script>
+</body>
+</html>
